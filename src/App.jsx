@@ -11,6 +11,8 @@ import Agenda from './pages/recepcion/Agenda'
 import Disponibilidad from './pages/recepcion/Disponibilidad'
 import NuevaCita from './pages/recepcion/NuevaCita'
 import Pacientes from './pages/recepcion/Pacientes'
+import MiAgenda from './pages/dentista/MiAgenda'
+import Historial from './pages/dentista/Historial'
 
 const AuthContext = createContext(null)
 export const useAuth = () => useContext(AuthContext)
@@ -22,9 +24,11 @@ const MENU = [
   { ruta: '/mis-citas', texto: 'Mis citas', icono: '📅', roles: ['paciente'], Pagina: MisCitas },
   { ruta: '/solicitar', texto: 'Solicitar cita', icono: '➕', roles: ['paciente'], Pagina: SolicitarCita },
   { ruta: '/agenda', texto: 'Agenda del día', icono: '📅', roles: ['recepcionista', 'asistente', 'admin'], Pagina: Agenda },
+  { ruta: '/mi-agenda', texto: 'Mi agenda', icono: '📅', roles: ['dentista'], Pagina: MiAgenda },
   { ruta: '/disponibilidad', texto: 'Disponibilidad', icono: '🕒', roles: ['recepcionista', 'admin'], Pagina: Disponibilidad },
   { ruta: '/nueva-cita', texto: 'Registrar cita', icono: '➕', roles: ['recepcionista', 'admin'], Pagina: NuevaCita },
   { ruta: '/pacientes', texto: 'Pacientes', icono: '👥', roles: ['recepcionista', 'admin'], Pagina: Pacientes },
+  { ruta: '/historial', texto: 'Historial clínico', icono: '🦷', roles: ['dentista', 'admin'], Pagina: Historial },
 ]
 
 // Qué notificaciones le corresponden a cada rol
