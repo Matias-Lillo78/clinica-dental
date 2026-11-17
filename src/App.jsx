@@ -11,6 +11,7 @@ import Agenda from './pages/recepcion/Agenda'
 import Disponibilidad from './pages/recepcion/Disponibilidad'
 import NuevaCita from './pages/recepcion/NuevaCita'
 import Pacientes from './pages/recepcion/Pacientes'
+import Pagos from './pages/recepcion/Pagos'
 import MiAgenda from './pages/dentista/MiAgenda'
 import Historial from './pages/dentista/Historial'
 
@@ -28,6 +29,7 @@ const MENU = [
   { ruta: '/disponibilidad', texto: 'Disponibilidad', icono: '🕒', roles: ['recepcionista', 'admin'], Pagina: Disponibilidad },
   { ruta: '/nueva-cita', texto: 'Registrar cita', icono: '➕', roles: ['recepcionista', 'admin'], Pagina: NuevaCita },
   { ruta: '/pacientes', texto: 'Pacientes', icono: '👥', roles: ['recepcionista', 'admin'], Pagina: Pacientes },
+  { ruta: '/pagos', texto: 'Pagos y deudas', icono: '💳', roles: ['recepcionista', 'admin'], Pagina: Pagos },
   { ruta: '/historial', texto: 'Historial clínico', icono: '🦷', roles: ['dentista', 'admin'], Pagina: Historial },
 ]
 
