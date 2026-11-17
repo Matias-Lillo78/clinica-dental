@@ -15,6 +15,8 @@ import Pacientes from './pages/recepcion/Pacientes'
 import Pagos from './pages/recepcion/Pagos'
 import MiAgenda from './pages/dentista/MiAgenda'
 import Historial from './pages/dentista/Historial'
+import Reportes from './pages/admin/Reportes'
+import Auditoria from './pages/admin/Auditoria'
 
 const AuthContext = createContext(null)
 export const useAuth = () => useContext(AuthContext)
@@ -25,6 +27,7 @@ export const useAuth = () => useContext(AuthContext)
 const MENU = [
   { ruta: '/mis-citas', texto: 'Mis citas', icono: '📅', roles: ['paciente'], Pagina: MisCitas },
   { ruta: '/solicitar', texto: 'Solicitar cita', icono: '➕', roles: ['paciente'], Pagina: SolicitarCita },
+  { ruta: '/reportes', texto: 'Reportes', icono: '📊', roles: ['admin'], Pagina: Reportes },
   { ruta: '/agenda', texto: 'Agenda del día', icono: '📅', roles: ['recepcionista', 'asistente', 'admin'], Pagina: Agenda },
   { ruta: '/mi-agenda', texto: 'Mi agenda', icono: '📅', roles: ['dentista'], Pagina: MiAgenda },
   { ruta: '/disponibilidad', texto: 'Disponibilidad', icono: '🕒', roles: ['recepcionista', 'admin'], Pagina: Disponibilidad },
@@ -32,6 +35,7 @@ const MENU = [
   { ruta: '/pacientes', texto: 'Pacientes', icono: '👥', roles: ['recepcionista', 'admin'], Pagina: Pacientes },
   { ruta: '/pagos', texto: 'Pagos y deudas', icono: '💳', roles: ['recepcionista', 'admin'], Pagina: Pagos },
   { ruta: '/historial', texto: 'Historial clínico', icono: '🦷', roles: ['dentista', 'admin'], Pagina: Historial },
+  { ruta: '/auditoria', texto: 'Auditoría', icono: '🛡️', roles: ['admin'], Pagina: Auditoria },
   { ruta: '/notificaciones', texto: 'Notificaciones', icono: '🔔', roles: ['paciente', 'recepcionista', 'dentista', 'asistente', 'admin'], Pagina: Notificaciones },
 ]
 
