@@ -5,6 +5,7 @@ import { ROLES } from './lib/utils'
 
 import Login from './pages/Login'
 import RegistroPaciente from './pages/RegistroPaciente'
+import Agenda from './pages/recepcion/Agenda'
 import Pacientes from './pages/recepcion/Pacientes'
 
 const AuthContext = createContext(null)
@@ -14,6 +15,7 @@ export const useAuth = () => useContext(AuthContext)
 // Cada opción indica su ruta, los roles que pueden verla y la pantalla que muestra.
 // La primera opción de cada rol es su pantalla de inicio.
 const MENU = [
+  { ruta: '/agenda', texto: 'Agenda del día', icono: '📅', roles: ['recepcionista', 'asistente', 'admin'], Pagina: Agenda },
   { ruta: '/pacientes', texto: 'Pacientes', icono: '👥', roles: ['recepcionista', 'admin'], Pagina: Pacientes },
 ]
 
