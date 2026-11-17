@@ -5,6 +5,7 @@ import { ROLES } from './lib/utils'
 
 import Login from './pages/Login'
 import RegistroPaciente from './pages/RegistroPaciente'
+import Notificaciones from './pages/Notificaciones'
 import MisCitas from './pages/paciente/MisCitas'
 import SolicitarCita from './pages/paciente/SolicitarCita'
 import Agenda from './pages/recepcion/Agenda'
@@ -31,6 +32,7 @@ const MENU = [
   { ruta: '/pacientes', texto: 'Pacientes', icono: '👥', roles: ['recepcionista', 'admin'], Pagina: Pacientes },
   { ruta: '/pagos', texto: 'Pagos y deudas', icono: '💳', roles: ['recepcionista', 'admin'], Pagina: Pagos },
   { ruta: '/historial', texto: 'Historial clínico', icono: '🦷', roles: ['dentista', 'admin'], Pagina: Historial },
+  { ruta: '/notificaciones', texto: 'Notificaciones', icono: '🔔', roles: ['paciente', 'recepcionista', 'dentista', 'asistente', 'admin'], Pagina: Notificaciones },
 ]
 
 // Qué notificaciones le corresponden a cada rol
