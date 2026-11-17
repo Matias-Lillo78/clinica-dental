@@ -5,6 +5,18 @@ import { ROLES } from './lib/utils'
 
 import Login from './pages/Login'
 import RegistroPaciente from './pages/RegistroPaciente'
+import Notificaciones from './pages/Notificaciones'
+import MisCitas from './pages/paciente/MisCitas'
+import SolicitarCita from './pages/paciente/SolicitarCita'
+import Agenda from './pages/recepcion/Agenda'
+import Disponibilidad from './pages/recepcion/Disponibilidad'
+import NuevaCita from './pages/recepcion/NuevaCita'
+import Pacientes from './pages/recepcion/Pacientes'
+import Pagos from './pages/recepcion/Pagos'
+import MiAgenda from './pages/dentista/MiAgenda'
+import Historial from './pages/dentista/Historial'
+import Reportes from './pages/admin/Reportes'
+import Auditoria from './pages/admin/Auditoria'
 
 const AuthContext = createContext(null)
 export const useAuth = () => useContext(AuthContext)
@@ -13,6 +25,18 @@ export const useAuth = () => useContext(AuthContext)
 // Cada opción indica su ruta, los roles que pueden verla y la pantalla que muestra.
 // La primera opción de cada rol es su pantalla de inicio.
 const MENU = [
+  { ruta: '/mis-citas', texto: 'Mis citas', icono: '📅', roles: ['paciente'], Pagina: MisCitas },
+  { ruta: '/solicitar', texto: 'Solicitar cita', icono: '➕', roles: ['paciente'], Pagina: SolicitarCita },
+  { ruta: '/reportes', texto: 'Reportes', icono: '📊', roles: ['admin'], Pagina: Reportes },
+  { ruta: '/agenda', texto: 'Agenda del día', icono: '📅', roles: ['recepcionista', 'asistente', 'admin'], Pagina: Agenda },
+  { ruta: '/mi-agenda', texto: 'Mi agenda', icono: '📅', roles: ['dentista'], Pagina: MiAgenda },
+  { ruta: '/disponibilidad', texto: 'Disponibilidad', icono: '🕒', roles: ['recepcionista', 'admin'], Pagina: Disponibilidad },
+  { ruta: '/nueva-cita', texto: 'Registrar cita', icono: '➕', roles: ['recepcionista', 'admin'], Pagina: NuevaCita },
+  { ruta: '/pacientes', texto: 'Pacientes', icono: '👥', roles: ['recepcionista', 'admin'], Pagina: Pacientes },
+  { ruta: '/pagos', texto: 'Pagos y deudas', icono: '💳', roles: ['recepcionista', 'admin'], Pagina: Pagos },
+  { ruta: '/historial', texto: 'Historial clínico', icono: '🦷', roles: ['dentista', 'admin'], Pagina: Historial },
+  { ruta: '/auditoria', texto: 'Auditoría', icono: '🛡️', roles: ['admin'], Pagina: Auditoria },
+  { ruta: '/notificaciones', texto: 'Notificaciones', icono: '🔔', roles: ['paciente', 'recepcionista', 'dentista', 'asistente', 'admin'], Pagina: Notificaciones },
 ]
 
 // Qué notificaciones le corresponden a cada rol
