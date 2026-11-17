@@ -5,6 +5,8 @@ import { ROLES } from './lib/utils'
 
 import Login from './pages/Login'
 import RegistroPaciente from './pages/RegistroPaciente'
+import MisCitas from './pages/paciente/MisCitas'
+import SolicitarCita from './pages/paciente/SolicitarCita'
 import Agenda from './pages/recepcion/Agenda'
 import Disponibilidad from './pages/recepcion/Disponibilidad'
 import NuevaCita from './pages/recepcion/NuevaCita'
@@ -17,6 +19,8 @@ export const useAuth = () => useContext(AuthContext)
 // Cada opción indica su ruta, los roles que pueden verla y la pantalla que muestra.
 // La primera opción de cada rol es su pantalla de inicio.
 const MENU = [
+  { ruta: '/mis-citas', texto: 'Mis citas', icono: '📅', roles: ['paciente'], Pagina: MisCitas },
+  { ruta: '/solicitar', texto: 'Solicitar cita', icono: '➕', roles: ['paciente'], Pagina: SolicitarCita },
   { ruta: '/agenda', texto: 'Agenda del día', icono: '📅', roles: ['recepcionista', 'asistente', 'admin'], Pagina: Agenda },
   { ruta: '/disponibilidad', texto: 'Disponibilidad', icono: '🕒', roles: ['recepcionista', 'admin'], Pagina: Disponibilidad },
   { ruta: '/nueva-cita', texto: 'Registrar cita', icono: '➕', roles: ['recepcionista', 'admin'], Pagina: NuevaCita },
