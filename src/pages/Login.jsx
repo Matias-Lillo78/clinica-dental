@@ -1,11 +1,12 @@
 import { useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { useAuth } from '../App'
 import { claveDemo, iniciarSesion, modoDemo, usuariosDemo } from '../lib/db'
 import { ROLES } from '../lib/utils'
 
 export default function Login() {
   const { setUsuario } = useAuth()
+  const navegar = useNavigate()
   const [email, setEmail] = useState('')
   const [clave, setClave] = useState('')
   const [error, setError] = useState('')
@@ -18,6 +19,7 @@ export default function Login() {
     setEnviando(true)
     try {
       setUsuario(await iniciarSesion(correo, pass))
+      navegar('/') 
     } catch (err) {
       setError(err.message)
     } finally {
